@@ -1,7 +1,6 @@
-let todoId = 0;
-export const addTodo = text => ({
+export const addTodo = (text, todoId) => ({
   type: "ADD_TODO",
-  id: todoId++,
+  id: todoId,
   text
 });
 export const toggleTodo = id => ({
@@ -17,3 +16,9 @@ export const VisibilityFilters = {
   SHOW_COMPLETED: "COMPLETED",
   SHOW_ACTIVE: "ACTIVE"
 };
+export const deleteAllTodos = () => ({
+  type: "DELETE_ALL"
+});
+export const deleteCompletedTodos = () => ({
+  type: "DELETE_COMPLETED"
+});
